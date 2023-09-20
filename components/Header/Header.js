@@ -20,6 +20,9 @@ export default function Header() {
                 <Link className={styles.navlink} href="/collections">
                     Collections
                 </Link>
+                <Link className={styles.navlink} href="/my-cameras">
+                    My Cameras
+                </Link>
                 <Link className={styles.navlink} href="/image-map">
                     Image Map
                 </Link>
