@@ -92,7 +92,11 @@ const ImageCarousel = ({ images }) => {
                             }
                             width="1386"
                             height="919"
-                            layout="responsive"
+                            sizes="100vw"
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                            }}
                         />
                         <h5 className="card-title">
                             {images[0] ? images[leftIndex].title : 'default'}
@@ -121,7 +125,11 @@ const ImageCarousel = ({ images }) => {
                                 }
                                 width="1386"
                                 height="919"
-                                layout="responsive"
+                                sizes="100vw"
+                                style={{
+                                    width: '100%',
+                                    height: 'auto',
+                                }}
                             />
                             <h5 className="card-title">
                                 {images[0]
@@ -145,7 +153,11 @@ const ImageCarousel = ({ images }) => {
                             }
                             width="1386"
                             height="919"
-                            layout="responsive"
+                            sizes="100vw"
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                            }}
                         />
                         <h5 className="card-title">
                             {images[0] ? images[rightIndex].title : 'default'}

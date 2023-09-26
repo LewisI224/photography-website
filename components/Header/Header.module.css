@@ -38,6 +38,7 @@
     font-size: 4rem;
     text-decoration: none;
     color: #7c9d96;
+    transition: 0.3s;
 }
 
 .title:hover {
@@ -64,6 +65,7 @@
     color: #7c9d96;
     margin: 0rem 2rem;
     display: block;
+    transition: 0.3s;
 }
 
 .navlink:hover {
@@ -71,13 +73,26 @@
     text-shadow: 0.1rem 0.1rem 0.1rem #e9b384;
 }
 
+.active {
+    text-decoration: none;
+    color: #7c9d96;
+    text-shadow:
+        -0.1rem -0.1rem 0 #e9b384,
+        0.1rem -0.1rem 0 #e9b384,
+        -0.1rem 0.1rem 0 #e9b384,
+        0.1rem 0.1rem 0 #e9b384;
+    display: block;
+}
+
+.active:hover {
+    color: #7c9d96;
+}
+
 .links {
     display: flex;
     position: absolute;
     width: 100%;
-    bottom: 0;
     justify-content: center;
-    text-align: center;
     bottom: 0;
     left: 0;
     padding-bottom: 5%;
@@ -85,6 +100,7 @@
 
 .link {
     padding: 1%;
+    width: 8%;
 }
 
 .link:hover {
@@ -156,8 +172,6 @@
         display: flex;
         top: 0;
         right: 0;
-        justify-content: end;
-        text-align: end;
         padding: 2%;
     }
 
@@ -169,6 +183,4 @@
     .link:hover {
         filter: none;
     }
-    
-    
 }

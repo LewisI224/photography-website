@@ -12,7 +12,11 @@ export default function ImagePreview({ title, filename, id }) {
                         alt={title}
                         width="1200"
                         height="1200"
-                        layout="responsive"
+                        sizes="100vw"
+                        style={{
+                            width: '100%',
+                            height: 'auto',
+                        }}
                     />
                     <h5 className="card-title">{title}</h5>
                 </div>

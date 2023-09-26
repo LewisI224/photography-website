@@ -1,7 +1,16 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './Header.module.css'
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
+    let pathname = usePathname()
+    let pathnameRegex
+    if (pathname != '/') {
+        pathnameRegex = new RegExp(pathname)
+    } else {
+        pathnameRegex = new RegExp('homepage')
+    }
 
     return (
         <div className={styles.sidebar}>
@@ -13,29 +22,68 @@ export default function Header() {
                     <p className={styles.tagline}>Photography</p>
                 </div>
             </div>
+
             <div className={styles.navs}>
-                <Link className={styles.navlink} href="/all-images">
+                <Link
+                    className={
+                        pathnameRegex.test('/all-images')
+                            ? styles.active
+                            : styles.navlink
+                    }
+                    href="/all-images"
+                >
                     All Images
                 </Link>
-                <Link className={styles.navlink} href="/collections">
+                <Link
+                    className={
+                        pathnameRegex.test('/collections')
+                            ? styles.active
+                            : styles.navlink
+                    }
+                    href="/collections"
+                >
                     Collections
                 </Link>
-                <Link className={styles.navlink} href="/my-cameras">
-                    My Cameras
-                </Link>
-                <Link className={styles.navlink} href="/image-map">
+                <Link
+                    className={
+                        pathnameRegex.test('/image-map')
+                            ? styles.active
+                            : styles.navlink
+                    }
+                    href="/image-map"
+                >
                     Image Map
                 </Link>
             </div>
             <div className={styles.links}>
                 <div className={styles.link}>
                     <a href="https://www.instagram.com/lewisi.photos/">
-                        <img src="/instagram.svg"></img>
+                        <Image
+                            src="/instagram.svg"
+                            alt="link to instagram"
+                            width="1200"
+                            height="1200"
+                            sizes="100vw"
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                            }}
+                        />
                     </a>
                 </div>
                 <div className={styles.link}>
                     <a href="https://github.com/LewisI224">
-                        <img src="/github.svg"></img>
+                        <Image
+                            src="/github.svg"
+                            alt="link to github"
+                            width="1200"
+                            height="1200"
+                            sizes="100vw"
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                            }}
+                        />
                     </a>
                 </div>
             </div>

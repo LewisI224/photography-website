@@ -31,20 +31,25 @@
     margin: 0;
 }
 
+.imageLocation {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
 .imageDate {
     font-size: 1.25rem;
     margin: 0;
 }
 
-.imageCamera {
+.imageDetail {
     font-size: 1.25rem;
     font-family: UrbanistBoldItalic;
     margin: 0;
 }
 
-.imageFilm {
-    font-size: 1.25rem;
-    font-family: UrbanistBoldItalic;
+.map {
+    height: 20vh;
+    width: 15vw;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -54,34 +59,30 @@
         display: block;
         padding-top: 2.5vh;
     }
-    
+
     .imagecontainer {
         width: fit-content;
         height: fit-content;
         max-height: 80vh;
         margin: auto;
     }
-    
+
     .imagecontainer img {
         max-height: 75vh;
         max-width: 90vw;
     }
-    
+
     .imageDetails {
         width: 90vw;
         margin-left: auto;
         border: none;
     }
-    
-    .imageDate {
+
+    .imageDetail {
         font-size: 1rem;
     }
-    
-    .imageCamera {
-        font-size: 1rem;
-    }
-    
-    .imageFilm {
-        font-size: 1rem;
+
+    .map {
+        display: none;
     }
 }

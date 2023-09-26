@@ -14,9 +14,13 @@ export default function ImageModal({ data }) {
                     alt={data.title}
                     width="1386"
                     height="919"
-                    layout="responsive"
+                    sizes="100vw"
+                    style={{
+                        width: '100%',
+                        height: 'auto',
+                    }}
                 />
-                <h5 className={styles.thumbnailTitle}>{data.title}</h5>
+                <h5>{data.title}</h5>
             </div>
 
             <div
@@ -57,8 +61,12 @@ export default function ImageModal({ data }) {
                                     alt={data.title}
                                     width="1386"
                                     height="919"
-                                    layout='responsive'
                                     className={styles.image}
+                                    sizes="100vw"
+                                    style={{
+                                        width: '100%',
+                                        height: 'auto',
+                                    }}
                                 />
                             </a>
                         </div>

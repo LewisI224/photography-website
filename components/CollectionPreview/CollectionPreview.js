@@ -14,7 +14,11 @@ export default function CollectionPreview({ name, cover_image, id }) {
                     alt={name}
                     width="1386"
                     height="919"
-                    layout="responsive"
+                    sizes="100vw"
+                    style={{
+                        width: '100%',
+                        height: 'auto',
+                    }}
                 />
                 <h5 className={styles.title}>{name}</h5>
             </Link>
