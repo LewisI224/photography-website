@@ -54,6 +54,16 @@ export default function Header() {
                 >
                     Image Map
                 </Link>
+                <Link
+                    className={
+                        pathnameRegex.test('/my-cameras')
+                            ? styles.active
+                            : styles.navlink
+                    }
+                    href="/my-cameras"
+                >
+                    My Cameras
+                </Link>
             </div>
             <div className={styles.links}>
                 <div className={styles.link}>

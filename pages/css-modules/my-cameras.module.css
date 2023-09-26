@@ -1,28 +1,36 @@
 .cameraLeft {
     display: flex;
-    width: 100%;
     padding: 2.5%;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
     
 }
 
 .cameraRight {
     display: flex;
-    width: 100%;
     padding: 2.5%;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
 }
 
-.imageRight {
+/* .imageRight {
     display: flex;
     justify-content: end;
     width: fit-content;
-}
+} */
 
 .textRight {
     display: flex;
     justify-content: end;
     width: 80%;
+    margin: auto;
+    font-size: 1.25rem;
 }
 
 .textLeft {
     width: 100%;
+    margin: auto;
+    font-size: 1.25rem;    
 }
